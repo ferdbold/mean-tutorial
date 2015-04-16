@@ -25,11 +25,11 @@ app.factory('posts', [function() {
   var o = {
     // Fake posts data
     posts: [
-      {title: 'post 1', upvotes: 5},
-      {title: 'post 2', upvotes: 2},
-      {title: 'post 3', upvotes: 15},
-      {title: 'post 4', upvotes: 9},
-      {title: 'post 5', upvotes: 4}
+      {id: 0, title: 'post 1', link: '', upvotes: 5, comments: []},
+      {id: 1, title: 'post 2', link: '', upvotes: 2, comments: []},
+      {id: 2, title: 'post 3', link: '', upvotes: 15, comments: []},
+      {id: 3, title: 'post 4', link: '', upvotes: 9, comments: []},
+      {id: 4, title: 'post 5', link: '', upvotes: 4, comments: []}
     ]
   };
   return o;
@@ -82,7 +82,7 @@ app.controller('PostsCtrl', [
         author: 'user',
         upvotes: 0
       });
-      
+
       $scope.body = '';
     }
   }
